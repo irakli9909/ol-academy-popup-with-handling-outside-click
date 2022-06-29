@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import "./App.css";
+import "../App.css";
 
 import PopUp from "./PopUp";
-import "./App.css";
 
 function OpenPopUp() {
   const [showPopUp, setShowPopUp] = useState(false);
@@ -12,12 +11,12 @@ function OpenPopUp() {
   };
 
   return (
-    <div className={OpenPopUp ? "popup-box" : "popup"}>
+    <div className={OpenPopUp ? "popup" : "popup"}>
       <h1 className="text">
-        My react Popup{" "}
+        My react Popup
       </h1>
 
-      <button className="open-btn" onClick={() => setShowPopUp(true)}>
+      <button onClick={() => setShowPopUp(true)}>
         open
       </button>
       {showPopUp && <PopUp closePopUp={closePopUp} />}

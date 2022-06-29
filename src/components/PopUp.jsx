@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 
 import { AiOutlineClose } from "react-icons/ai";
-import "./App.css";
+import "../App.css";
 
 function PopUp(props) {
   const popup = useRef(null);
@@ -23,7 +23,7 @@ function PopUp(props) {
 
   return (
     <div className="body">
-      <div className="popup" ref={popup}>
+      <div className="popup-inner" ref={popup}>
         <button className="close-btn" onClick={() => props.closePopUp()}>
           <AiOutlineClose />
         </button>
